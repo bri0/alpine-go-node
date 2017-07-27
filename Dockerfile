@@ -17,8 +17,6 @@ RUN addgroup -g 1000 node \
         linux-headers \
         make \
         python \
-        git \
-        docker \
   # gpg keys listed at https://github.com/nodejs/node#release-team
   && for key in \
     9554F04D7259F04124DE6B476D5A82AC7E37093B \
@@ -67,3 +65,6 @@ RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg tar \
   && ln -s /opt/yarn/bin/yarn /usr/local/bin/yarnpkg \
   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz \
   && apk del .build-deps-yarn
+  
+RUN apk add --no-cache make git docker
+
