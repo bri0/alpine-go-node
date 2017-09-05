@@ -1,4 +1,4 @@
-FROM golang:1.8.3-alpine
+FROM golang:1.9.0-alpine
 
 ENV NPM_CONFIG_LOGLEVEL info
 ENV NODE_VERSION 8.2.1
